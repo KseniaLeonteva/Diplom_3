@@ -5,11 +5,6 @@ from locators.recovery_page_locators import RecoveryPageLocators
 
 
 class RecoveryPage(BasePage):
-    @allure.step('Ввести почту')
-    def set_email(self, email):
-        self.send_keys(LoginPageLocators.INPUT_EMAIL, email)
-
-
     @allure.step('Нажать кнопку Восстановить')
     def click_recovery_button(self):
         self.wait_element(RecoveryPageLocators.RECOVERY_BUTTON)

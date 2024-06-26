@@ -27,7 +27,7 @@ class TestRecoveryPage:
         login_page = LoginPage(driver)
         login_page.click_recover_password_button()
         recovery_page = RecoveryPage(driver)
-        recovery_page.set_email(Data.data)
+        login_page.set_email(Data.data)
         recovery_page.click_recovery_button()
         recovery_page.wait_visibility_save_button()
         assert recovery_page.get_current_url() == Url.RESET_PAGE
